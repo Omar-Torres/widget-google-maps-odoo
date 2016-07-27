@@ -58,7 +58,7 @@ openerp.widget_gmaps = function (openerp)
             if (String(lt) == '' || String(ln) == '' || String(zoom) == '')
             	var src_iframe = '';	
             else
-            	var src_iframe = 'https://www.google.com/maps/embed/v1/' + viewtype + '?key=' + API_KEY + center + '&zoom=' + zoom + '&maptype=' + maptype;
+            	var src_iframe = 'https://maps.google.com/maps?q=' + lt + ',' + ln + '&z=' + parseInt(zoom) + '&maptype=' + maptype + '&output=embed';
             
             this.$("#gmap").attr('src', src_iframe)
         },
